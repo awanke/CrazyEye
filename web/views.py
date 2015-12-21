@@ -14,7 +14,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import django.utils.timezone
 
 
-@login_required
+#@login_required
 def dashboard(request):
     if request.user.is_superuser:
         recent_tasks= models.TaskLog.objects.all()[:10]
@@ -26,7 +26,7 @@ def dashboard(request):
         return  HttpResponseRedirect('/hosts/')
 
 
-@login_required
+#@login_required
 def hosts(request):
 
     selected_g_id = request.GET.get('selected_group')
@@ -58,7 +58,7 @@ def login(request):
     else:
         return render(request, 'login.html')
 
-@login_required
+#@login_required
 def personal(request):
     if request.method == 'POST':
         print request.POST

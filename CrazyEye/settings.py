@@ -89,10 +89,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'CrazyEyes',
-        'HOST': '',
+        'HOST': '10.0.0.220',
         'PORT':3306,
         'USER':'root',
-        'PASSWORD': ''
+        'PASSWORD': 'pw1234'
     }
 }
 
